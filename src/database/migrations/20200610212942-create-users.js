@@ -1,0 +1,94 @@
+'use strict';
+
+const sequelize = require("sequelize");
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+
+    return queryInterface.createTable('users', {
+      id:{
+        type: Sequelize.STRING,
+        primaryKey: true,
+        allowNull:false,
+             
+      },
+      
+      name: {
+        type: Sequelize.STRING(50),
+        allowNull: false,
+      },
+      email: {
+        type: Sequelize.STRING(25),
+        allowNull: true,
+      },
+      phone: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      datebirth: {
+        type: Sequelize.STRING(15),
+        allowNull: false
+      },
+      indication: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+      },
+      rg: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      catalog: {
+        type: Sequelize.STRING(25),
+        allowNull: false
+      },
+      pointsupport: {
+        type: Sequelize.STRING(50),
+        allowNull: true
+      },
+      cep: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      },
+      rua: {
+        type: Sequelize.STRING(25),
+        allowNull: false
+      },
+      numero: {
+        type: Sequelize.STRING(10),
+        allowNull: false
+      },
+      complemento: {
+        type: Sequelize.STRING(25),
+        allowNull: true
+      },
+      cidade: {
+        type: Sequelize.STRING(25),
+        allowNull: false
+      },
+      estado: {
+        type: Sequelize.STRING(25),
+        allowNull: false
+      },
+      bairro: {
+        type: Sequelize.STRING(25),
+        allowNull: false
+      },
+      created_at:{
+        type: Sequelize.DATE,
+        allowNull:false
+      },
+      updated_at:{
+        type: Sequelize.DATE,
+        allowNull:false
+      }
+    });
+
+  },
+
+  down: (queryInterface, Sequelize) => {
+
+
+    return queryInterface.dropTable('users');
+
+  }
+};
