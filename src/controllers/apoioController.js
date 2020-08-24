@@ -9,6 +9,7 @@ module.exports = {
 
     async store(req, res) {
         const { name } = req.body;
+        
 
 
         const catalog = await Catalog.create({ name });
