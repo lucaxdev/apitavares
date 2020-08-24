@@ -8,10 +8,10 @@ module.exports = {
     },
 
     async store(req, res) {
-        const { id, name, email, phone, datebirth, indication, rg, catalog, pointsupport, cep, rua, numero, complemento, cidade, estado, bairro } = req.body;
+        const { id, name, email, phone, datebirth, indication, rg, catalog1,catalog2,catalog3,catalog4,catalog5,catalog6,catalog7,catalog8, pointsupport, cep, rua, numero, complemento, cidade, estado, bairro } = req.body;
 
 
-        const user = await User.create({ id, name, email, phone, datebirth, indication, rg, catalog, pointsupport, cep, rua, numero, complemento, cidade, estado, bairro });
+        const user = await User.create({ id, name, email, phone, datebirth, indication, rg, catalog1,catalog2,catalog3,catalog4,catalog5,catalog6,catalog7,catalog8, pointsupport, cep, rua, numero, complemento, cidade, estado, bairro });
 
         return res.json(user);
     },
