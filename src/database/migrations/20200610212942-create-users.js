@@ -37,9 +37,37 @@ module.exports = {
         type: Sequelize.STRING(30),
         allowNull: false
       },
-      catalog: {
+      catalog1: {
         type: Sequelize.STRING(25),
-        allowNull: false
+        allowNull: true
+      },
+      catalog2: {
+        type: Sequelize.STRING(25),
+        allowNull: true
+      },
+      catalog3: {
+        type: Sequelize.STRING(25),
+        allowNull: true
+      },
+      catalog4: {
+        type: Sequelize.STRING(25),
+        allowNull: true
+      },
+      catalog5: {
+        type: Sequelize.STRING(25),
+        allowNull: true
+      },
+      catalog6: {
+        type: Sequelize.STRING(25),
+        allowNull: true
+      },
+      catalog7: {
+        type: Sequelize.STRING(25),
+        allowNull: true
+      },
+      catalog8: {
+        type: Sequelize.STRING(25),
+        allowNull: true
       },
       pointsupport: {
         type: Sequelize.STRING(50),
