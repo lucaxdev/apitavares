@@ -17,6 +17,10 @@ routes.post('/catalog', CatalogController.store)
 routes.get('/catalog', CatalogController.index)
 routes.delete('/catalog/:id', CatalogController.delete)
 
+routes.get('/',(req,res)=>{
+    res.send('oi')
+})
+
 
 
 
