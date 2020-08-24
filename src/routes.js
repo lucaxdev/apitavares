@@ -1,6 +1,7 @@
 const express = require('express');
 const UserController = require('./controllers/usercontroller')
 const CatalogController = require('./controllers/catalogController')
+const ApoioController = require('./controllers/apoioController')
 const routes = express.Router();
 const Catalog = require('./models/Catalog');
 
@@ -17,6 +18,10 @@ routes.post('/catalog', CatalogController.store)
 routes.get('/catalog', CatalogController.index)
 routes.delete('/catalog/:id', CatalogController.delete)
 
+routes.post('/apoio', ApoioController.store)
+routes.get('/apoio', ApoioController.index)
+routes.delete('/apoio/:id', ApoioController.delete)
+ 
 routes.get('/',(req,res)=>{
     res.send('oi')
 })

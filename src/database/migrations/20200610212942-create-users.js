@@ -30,11 +30,11 @@ module.exports = {
         allowNull: false
       },
       indication: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING(30),
         allowNull: true
       },
       rg: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING(30),
         allowNull: false
       },
       catalog: {
@@ -46,7 +46,7 @@ module.exports = {
         allowNull: true
       },
       cep: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING(20),
         allowNull: false
       },
       rua: {
@@ -80,7 +80,7 @@ module.exports = {
       updated_at:{
         type: Sequelize.DATE,
         allowNull:false
-      }
+      } 
     });
 
   },
