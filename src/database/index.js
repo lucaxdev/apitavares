@@ -5,7 +5,11 @@ const User = require('../models/User');
 
 const Catalog = require('../models/Catalog');
 
+const Apoio = require('../models/Apoio');
+
 const connection = new Sequelize(dbConfig);
+
+Apoio.init(connection);
 
 User.init(connection);
 
